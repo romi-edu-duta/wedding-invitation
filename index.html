@@ -42,9 +42,54 @@
                 Please let us know if you can make it by September 15, 2024.
                 We're so excited to celebrate with you!
             </p>
-            <div id="google-form-container" class="aspect-w-1 aspect-h-1 md:aspect-w-2 md:aspect-h-1">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?embedded=true" width="640" height="1250" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <!--
+            <div id="google-form-wrapper">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?embedded=true"  id="google-form-iframe"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    title="RSVP Form">Loading…</iframe>
             </div>
+            <noscript>
+                <p class="text-center mt-4">
+                    Please <a href="https://forms.gle/KqGVxWVQHMZhJjEL6" target="_blank" class="text-brown-500 hover:underline">click here to RSVP</a> if the form doesn't load.
+                </p>
+            </noscript>
+            -->
+
+            <form id="customRsvpForm" class="space-y-6" action="https://getform.io/f/aejljqwb" method="POST">
+                <div>
+                    <label for="guestName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" name="guestName" id="guestName" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
+                </div>
+
+                <div>
+                    <label for="attending" class="block text-sm font-medium text-gray-700">Will you be attending?</label>
+                    <select id="attending" name="attending" required class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
+                        <option value="">Please select...</option>
+                        <option value="Joyfully Accepts">Joyfully Accepts</option>
+                        <option value="Regretfully Declines">Regretfully Declines</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="numberOfGuests" class="block text-sm font-medium text-gray-700">Number of Guests (if attending)</label>
+                    <input type="number" name="numberOfGuests" id="numberOfGuests" min="1" value="1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" id="submitRsvpButton" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brown-600 hover:bg-brown-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown-500">
+                        Send RSVP
+                    </button>
+                </div>
+                <div id="form-status" class="mt-4 text-center"></div>
+            </form>
         </section>
 
         <section id="story" class="mb-12 p-8 bg-white rounded-lg shadow-md">
