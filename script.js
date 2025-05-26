@@ -20,6 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log("Website script loaded.");
-    // You can add more JavaScript functionality here as your site grows.
-    // For example, a countdown timer, image gallery interactions, etc.
+    
 });
