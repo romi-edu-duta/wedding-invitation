@@ -1,0 +1,27 @@
+/* style.css - You can add custom CSS here if needed, but Tailwind CSS will handle most styling. */
+
+/* Example: Custom styles for elements not easily handled by Tailwind or for overrides */
+body {
+    /* The font-sans class from Tailwind will apply Inter, this is just an example */
+    /* font-family: 'Inter', sans-serif; */
+    /* background-color: #F5F5DC; /* This is handled by Tailwind bg-cream-100 */
+}
+
+h1, h2, h3 {
+    /* The font-serif class from Tailwind will apply Playfair Display */
+    /* font-family: 'Playfair Display', serif; */
+}
+
+/* You might want to add specific styles for the Google Form iframe if needed,
+   though often it's best to style the form within Google Forms itself. */
+#google-form-container iframe {
+    border-radius: 8px; /* Example: Rounded corners for the iframe */
+    min-height: 700px; /* Ensure enough height for the form */
+}
+
+/* Basic responsive considerations for the iframe, though width="100%" helps a lot. */
+@media (max-width: 768px) {
+    #google-form-container iframe {
+        min-height: 800px; /* Adjust height for smaller screens if necessary */
+    }
+}

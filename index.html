@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://placehold.co/32x32/E8D8C4/704214?text=💍" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cream-100 text-brown-700 font-sans">
+
+    <header class="py-12 text-center bg-brown-700 text-cream-100 shadow-lg">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold">Jane & John</h1>
+        <p class="text-lg md:text-2xl mt-2">Are Getting Married!</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="details" class="mb-12 p-8 bg-white rounded-lg shadow-md">
+            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">You're Invited!</h2>
+            <p class="text-lg mb-4 leading-relaxed text-center">
+                We joyfully invite you to celebrate our wedding.
+                Join us for an evening of love, laughter, and happily ever after.
+            </p>
+            <div class="text-center my-8">
+                <p class="text-2xl font-semibold">Saturday, October 26, 2024</p>
+                <p class="text-xl">At 4:00 PM</p>
+                <p class="text-xl mt-2">The Grand Ballroom, Downtown</p>
+                <p class="text-md mt-1"><a href="#map" class="text-brown-500 hover:underline">View Map</a></p>
+            </div>
+            <p class="text-lg leading-relaxed text-center">
+                We can't wait to share our special day with you.
+            </p>
+        </section>
+
+        <section id="rsvp" class="mb-12 p-8 bg-white rounded-lg shadow-md">
+            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">RSVP</h2>
+            <p class="text-lg mb-6 text-center">
+                Please let us know if you can make it by September 15, 2024.
+                We're so excited to celebrate with you!
+            </p>
+            <div id="google-form-container" class="aspect-w-1 aspect-h-1 md:aspect-w-2 md:aspect-h-1">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?embedded=true" width="640" height="1250" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </div>
+        </section>
+
+        <section id="story" class="mb-12 p-8 bg-white rounded-lg shadow-md">
+            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/E8D8C4/704214?text=Our+Photo" alt="Our Photo" class="rounded-lg shadow-sm w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E8D8C4/704214?text=Image+Not+Found';">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4 leading-relaxed">
+                        Our journey began on a sunny afternoon in the park... (Share a brief, sweet story here).
+                        We've shared so many wonderful moments since then, and we're thrilled to start this new chapter together.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        We look forward to creating many more memories with all of you!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="mb-12 p-8 bg-white rounded-lg shadow-md">
+            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">Venue Location</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                 <!--
+                    Replace this comment and the div below with your Google Maps embed iframe.
+                    Example: <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                -->
+                <div class="flex items-center justify-center h-96 bg-gray-100 rounded-md">
+                    <p class="text-gray-500">Google Maps embed for the venue will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 text-center bg-brown-700 text-cream-100 mt-12">
+        <p>&copy; <span id="currentYear"></span> Jane & John. All rights reserved.</p>
+        <p class="mt-1">Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS Customization (Optional)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream-100': '#F5F5DC', // A lighter cream
+                        'cream-200': '#E8D8C4', // A slightly darker cream
+                        'brown-500': '#A0522D', // Sienna
+                        'brown-600': '#8B4513', // SaddleBrown
+                        'brown-700': '#704214', // A deeper brown for text/accents
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
