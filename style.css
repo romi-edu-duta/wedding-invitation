@@ -70,9 +70,8 @@
 
 @font-face {
     font-family: PP-Playground;
-    src: 
+    src: url('fonts/PPPlayground-Thin.woff2') format('woff2'),
         url('fonts/PPPlayground-Thin.woff') format('woff'),
-        url('fonts/PPPlayground-Thin.woff2') format('woff2'),
         url('fonts/PPPlayground-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: italic;
@@ -81,9 +80,8 @@
 
 @font-face {
     font-family: PP-Playground;
-    src: 
+    src: url('fonts/PPPlayground-Light.woff2') format('woff2'),
         url('fonts/PPPlayground-Light.woff') format('woff'),
-        url('fonts/PPPlayground-Light.woff2') format('woff2'),
         url('fonts/PPPlayground-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
@@ -92,9 +90,8 @@
 
 @font-face {
     font-family: PP-Playground;
-    src: 
+    src: url('fonts/PPPlayground-Medium.woff2') format('woff2'),
         url('fonts/PPPlayground-Medium.woff') format('woff'),
-        url('fonts/PPPlayground-Medium.woff2') format('woff2'),
         url('fonts/PPPlayground-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
