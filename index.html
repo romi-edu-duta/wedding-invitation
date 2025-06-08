@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romina & Eduard | Nuestra Boda</title>
     
-    <!-- Step 1: Export this illustration from Figma as an SVG file -->
     <link rel="icon" href="assets/iconcito.svg" type="image/svg+xml">
 
-    <!-- Step 2: Update Google Fonts to include the script font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,11 +19,10 @@
 
         <!-- Header Section -->
         <header class="w-full flex flex-col items-center">
-            <p class="text-lg tracking-wider text-zinc-600">28 - Diciembre - 2025</p>
+            <p class="text-3xl tracking-wider text-zinc-600 font-script font-light">28 - Diciembre - 2025</p>
             <h1 class="font-script text-7xl md:text-9xl my-4 text-zinc-900">Romina & Eduard</h1>
             
-            <!-- Replace 'couple-drawing.svg' with the path to your exported SVG -->
-            <img src="assets/couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-80 md:w-96 my-8">
+            <img src="assets/couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-96 md:w-[64rem] my-8">
 
             <div class="my-4 text-zinc-700">
                 <p class="italic">"Con amor eterno te he amado"</p>
@@ -48,20 +44,27 @@
         </section>
 
               
+              
         <!-- Map Section -->
         <section id="map" class="w-full my-12">
             <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4">Ubicación</h3>
             
-            <div class="relative aspect-w-16 aspect-h-9 rounded-md overflow-hidden shadow-md">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.053784993604!2d-0.6286903241768118!3d38.60163226410161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63d576857fe5cb%3A0x41a1a2e43bd160ac!2sCaseta%20Nova%20by%20Natxo%20Sell%C3%A9s!5e0!3m2!1sen!2sfr!4v1749382518682!5m2!1sen!2sfr" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="absolute inset-0 w-full h-full"
-                    title="Mapa de la ubicación de la boda">
-                </iframe>
-            </div>
+            <a 
+                href="https://maps.app.goo.gl/q1GyP2qkib7NrXRC9" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block group w-full aspect-w-16 aspect-h-9 rounded-md overflow-hidden shadow-md cursor-pointer"
+                aria-label="Abrir la ubicación en Google Maps"
+            >
+                <img 
+                    src="mapa-dibujo.svg" 
+                    alt="Mapa dibujado de la ubicación. Haz clic para abrir en Google Maps." 
+                    class="w-full h-full object-cover bg-zinc-100 transition-transform duration-300 group-hover:scale-105"
+                >
+            </a>
+            <p class="text-center text-sm text-zinc-600 mt-4">
+                Haz clic en el mapa para ver la ruta en Google Maps.
+            </p>
         </section>
 
     
@@ -76,7 +79,7 @@
         <section id="rsvp" class="w-full flex flex-col items-center my-8">
             <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Confirmar Asistencia</h2>
             <p class="mt-4 max-w-md text-zinc-700">
-                Por favor, confírmanos tu asistencia antes del 1 de Noviembre de 2025. ¡Nos haría muchísima ilusión celebrar este día contigo!
+                Por favor, confírmanos tu asistencia antes del <br><br>1 de Noviembre de 2025. <br><br>¡Nos haría muchísima ilusión celebrar este día contigo!
             </p>
 
             <!-- Custom Form pointing to Google Forms -->
@@ -151,13 +154,15 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
     
     <script>
-        // La configuración ya no necesita el bloque de plugins
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        script: ['Pinyon Script', 'cursive'],
+                        // 'sans' será tu fuente tipo máquina de escribir
+                        sans: ['Neue Machina', 'ui-sans-serif', 'system-ui'],
+                        
+                        // 'script' será tu fuente sofisticada
+                        script: ['PP Playground', 'serif'],
                     }
                 }
             }
