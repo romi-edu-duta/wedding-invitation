@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function launchConfetti() {
-    const duration = 2 * 1000; // El confeti desaparecerá después de 5 segundos
+    const duration = 1000; // El confeti desaparecerá después de 1 segundos
     const animationEnd = Date.now() + duration;
     
-    // Colores elegantes que coinciden con tu paleta de zinc/grises y un toque dorado
+    // Colores elegantes que coinciden con tu paleta de zinc/grises y un toque granate
     const colors = ['#e5e7eb', '#a3a3a3', '#525252', '#800000'];
 
     function randomInRange(min, max) {
