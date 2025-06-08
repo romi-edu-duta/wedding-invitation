@@ -26,7 +26,7 @@
             <h1 class="font-script text-7xl md:text-9xl my-4 text-zinc-900">Romina & Eduard</h1>
             
             <!-- Replace 'couple-drawing.svg' with the path to your exported SVG -->
-            <img src="couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-60 md:w-72 my-8">
+            <img src="assets/couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-80 md:w-96 my-8">
 
             <div class="my-4 text-zinc-700">
                 <p class="italic">"Con amor eterno te he amado"</p>
@@ -60,6 +60,9 @@
         <hr class="w-24 border-zinc-200 my-12">
 
         <!-- RSVP Section -->
+        <!-- Prefilled link:
+         https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?usp=pp_url&entry.1869319172=nombre&entry.1380771300=S%C3%AD&entry.179393330=2&entry.1382048514=restricciones&entry.1670016670=cancion&entry.1518536853=mensaje
+         -->
         <section id="rsvp" class="w-full flex flex-col items-center my-8">
             <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Confirmar Asistencia</h2>
             <p class="mt-4 max-w-md text-zinc-700">
@@ -70,22 +73,37 @@
             <!-- Remember to replace the 'name' attributes with your own 'entry.XXXX' IDs -->
             <form id="customRsvpForm" class="w-full max-w-lg space-y-8 mt-10 text-left">
                 <div>
-                    <label for="guestName" class="block text-sm font-medium text-zinc-700">Nombre completo</label>
-                    <input type="text" name="entry.123456789" id="guestName" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
+                    <label for="guestName" class="block text-sm font-medium text-zinc-700">Nombre(s)</label>
+                    <input type="text" name="entry.1869319172" id="guestName" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
 
                 <div>
                     <label for="attending" class="block text-sm font-medium text-zinc-700">¿Nos acompañarás?</label>
-                    <select id="attending" name="entry.987654321" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
+                    <select id="attending" name="entry.1380771300" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                         <option value="">Por favor, selecciona...</option>
-                        <option value="Sí, con mucha ilusión">Sí, con mucha ilusión</option>
-                        <option value="No, pero estaré en espíritu">No, pero estaré en espíritu</option>
+                        <option value="Sí">Sí, con mucha ilusión</option>
+                        <option value="No">No, pero estaré en espíritu</option>
                     </select>
+                </div>
+
+                <div>
+                    <label for="guests" class="block text-sm font-medium text-zinc-700">Número de acompañantes</label>
+                    <input type="number" name="entry.179393330" id="guests" min="0" max="5" value="0" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
+                </div>
+
+                <div>
+                    <label for="dietaryRestrictions" class="block text-sm font-medium text-zinc-700">¿Tienes alguna restricción alimentaria?</label>
+                    <input type="text" name="entry.1382048514" id="dietaryRestrictions" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
+                </div>
+
+                <div>
+                    <label for="song" class="block text-sm font-medium text-zinc-700">Dinos si quieres que añadamos alguna canción a la playlist</label>
+                    <input type="text" name="entry.1670016670" id="song" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
                 
                  <div>
-                    <label for="message" class="block text-sm font-medium text-zinc-700">¿Alguna alergia o mensaje para nosotros? (Opcional)</label>
-                    <textarea id="message" name="entry.556677889" rows="3" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition"></textarea>
+                    <label for="message" class="block text-sm font-medium text-zinc-700">¿Tienes algún mensaje para nosotros? Te leemos</label>
+                    <textarea id="message" name="entry.1518536853" rows="3" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition"></textarea>
                 </div>
 
                 <div>
