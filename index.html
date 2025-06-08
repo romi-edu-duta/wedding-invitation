@@ -1,156 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Set language to Spanish -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding Invitation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://placehold.co/32x32/E8D8C4/704214?text=💍" type="image/png">
+    <title>Romina & Eduard | Nuestra Boda</title>
+    
+    <!-- Step 1: Export this illustration from Figma as an SVG file -->
+    <link rel="icon" href="couple-drawing.svg" type="image/svg+xml">
+
+    <!-- Step 2: Update Google Fonts to include the script font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-cream-100 text-brown-700 font-sans">
+<body class="bg-white text-zinc-800 font-sans antialiased">
 
-    <header class="py-12 text-center bg-brown-700 text-cream-100 shadow-lg">
-        <h1 class="text-4xl md:text-6xl font-serif font-bold">Jane & John</h1>
-        <p class="text-lg md:text-2xl mt-2">Are Getting Married!</p>
-    </header>
+    <!-- Main container to center the content -->
+    <main class="container mx-auto px-6 py-16 max-w-2xl flex flex-col items-center text-center">
 
-    <main class="container mx-auto px-6 py-12">
+        <!-- Header Section -->
+        <header class="w-full flex flex-col items-center">
+            <p class="text-lg tracking-wider text-zinc-600">28 - Diciembre - 2025</p>
+            <h1 class="font-script text-7xl md:text-9xl my-4 text-zinc-900">Romina & Eduard</h1>
+            
+            <!-- Replace 'couple-drawing.svg' with the path to your exported SVG -->
+            <img src="couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-60 md:w-72 my-8">
 
-        <section id="details" class="mb-12 p-8 bg-white rounded-lg shadow-md">
-            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">You're Invited!</h2>
-            <p class="text-lg mb-4 leading-relaxed text-center">
-                We joyfully invite you to celebrate our wedding.
-                Join us for an evening of love, laughter, and happily ever after.
-            </p>
-            <div class="text-center my-8">
-                <p class="text-2xl font-semibold">Saturday, October 26, 2024</p>
-                <p class="text-xl">At 4:00 PM</p>
-                <p class="text-xl mt-2">The Grand Ballroom, Downtown</p>
-                <p class="text-md mt-1"><a href="#map" class="text-brown-500 hover:underline">View Map</a></p>
+            <div class="my-4 text-zinc-700">
+                <p class="italic">"Con amor eterno te he amado"</p>
+                <p class="text-sm mt-1">Jeremías 31:3</p>
             </div>
-            <p class="text-lg leading-relaxed text-center">
-                We can't wait to share our special day with you.
-            </p>
+        </header>
+
+        <!-- Spacer -->
+        <hr class="w-24 border-zinc-200 my-12">
+
+        <!-- Details Section -->
+        <section id="details" class="w-full flex flex-col items-center my-8">
+            <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Lugar, fecha y hora:</h2>
+            <div class="mt-8 text-xl leading-relaxed text-zinc-800">
+                <p>28 de Diciembre, 2025</p>
+                <p>Caseta Nova, Castalla, Alicante</p>
+                <p>11:30 horas</p>
+            </div>
         </section>
 
-        <section id="rsvp" class="mb-12 p-8 bg-white rounded-lg shadow-md">
-            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">RSVP</h2>
-            <p class="text-lg mb-6 text-center">
-                Please let us know if you can make it by September 15, 2024.
-                We're so excited to celebrate with you!
-            </p>
-            <!--
-            <div id="google-form-wrapper">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?embedded=true"  id="google-form-iframe"
-                    frameborder="0"
-                    marginheight="0"
-                    marginwidth="0"
-                    title="RSVP Form">Loading…</iframe>
-            </div>
-            <noscript>
-                <p class="text-center mt-4">
-                    Please <a href="https://forms.gle/KqGVxWVQHMZhJjEL6" target="_blank" class="text-brown-500 hover:underline">click here to RSVP</a> if the form doesn't load.
-                </p>
-            </noscript>
-            -->
+        <!-- Map Section -->
+        <section id="map" class="w-full my-12">
+             <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4">Ubicación</h3>
+             <div class="aspect-w-16 aspect-h-9 bg-zinc-100 rounded-md flex items-center justify-center">
+                 <!-- Replace this div with your Google Maps embed iframe -->
+                 <p class="text-zinc-500">El mapa de Google aparecerá aquí</p>
+             </div>
+        </section>
 
-            <form id="customRsvpForm" class="space-y-6" action="https://getform.io/f/aejljqwb" method="POST">
+        <!-- Spacer -->
+        <hr class="w-24 border-zinc-200 my-12">
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="w-full flex flex-col items-center my-8">
+            <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Confirmar Asistencia</h2>
+            <p class="mt-4 max-w-md text-zinc-700">
+                Por favor, confírmanos tu asistencia antes del 1 de Noviembre de 2025. ¡Nos haría muchísima ilusión celebrar este día contigo!
+            </p>
+
+            <!-- Custom Form pointing to Google Forms -->
+            <!-- Remember to replace the 'name' attributes with your own 'entry.XXXX' IDs -->
+            <form id="customRsvpForm" class="w-full max-w-lg space-y-8 mt-10 text-left">
                 <div>
-                    <label for="guestName" class="block text-sm font-medium text-gray-700">Full Name</label>
-                    <input type="text" name="guestName" id="guestName" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
+                    <label for="guestName" class="block text-sm font-medium text-zinc-700">Nombre completo</label>
+                    <input type="text" name="entry.123456789" id="guestName" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
 
                 <div>
-                    <label for="attending" class="block text-sm font-medium text-gray-700">Will you be attending?</label>
-                    <select id="attending" name="attending" required class="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
-                        <option value="">Please select...</option>
-                        <option value="Joyfully Accepts">Joyfully Accepts</option>
-                        <option value="Regretfully Declines">Regretfully Declines</option>
+                    <label for="attending" class="block text-sm font-medium text-zinc-700">¿Nos acompañarás?</label>
+                    <select id="attending" name="entry.987654321" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
+                        <option value="">Por favor, selecciona...</option>
+                        <option value="Sí, con mucha ilusión">Sí, con mucha ilusión</option>
+                        <option value="No, pero estaré en espíritu">No, pero estaré en espíritu</option>
                     </select>
                 </div>
-
-                <div>
-                    <label for="numberOfGuests" class="block text-sm font-medium text-gray-700">Number of Guests (if attending)</label>
-                    <input type="number" name="numberOfGuests" id="numberOfGuests" min="1" value="1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm">
+                
+                 <div>
+                    <label for="message" class="block text-sm font-medium text-zinc-700">¿Alguna alergia o mensaje para nosotros? (Opcional)</label>
+                    <textarea id="message" name="entry.556677889" rows="3" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition"></textarea>
                 </div>
 
                 <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700">Message (Optional)</label>
-                    <textarea id="message" name="message" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brown-500 focus:border-brown-500 sm:text-sm"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" id="submitRsvpButton" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brown-600 hover:bg-brown-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown-500">
-                        Send RSVP
+                    <button type="submit" id="submitRsvpButton" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-zinc-800 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500 transition">
+                        ENVIAR CONFIRMACIÓN
                     </button>
                 </div>
-                <div id="form-status" class="mt-4 text-center"></div>
+                <div id="form-status" class="mt-4 text-center h-6"></div>
             </form>
-        </section>
-
-        <section id="story" class="mb-12 p-8 bg-white rounded-lg shadow-md">
-            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">Our Story</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/2">
-                    <img src="https://placehold.co/600x400/E8D8C4/704214?text=Our+Photo" alt="Our Photo" class="rounded-lg shadow-sm w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E8D8C4/704214?text=Image+Not+Found';">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="text-lg mb-4 leading-relaxed">
-                        Our journey began on a sunny afternoon in the park... (Share a brief, sweet story here).
-                        We've shared so many wonderful moments since then, and we're thrilled to start this new chapter together.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        We look forward to creating many more memories with all of you!
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="map" class="mb-12 p-8 bg-white rounded-lg shadow-md">
-            <h2 class="text-3xl font-serif text-brown-600 mb-6 text-center">Venue Location</h2>
-            <div class="aspect-w-16 aspect-h-9">
-                 <!--
-                    Replace this comment and the div below with your Google Maps embed iframe.
-                    Example: <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                -->
-                <div class="flex items-center justify-center h-96 bg-gray-100 rounded-md">
-                    <p class="text-gray-500">Google Maps embed for the venue will appear here.</p>
-                </div>
-            </div>
         </section>
 
     </main>
 
-    <footer class="py-8 text-center bg-brown-700 text-cream-100 mt-12">
-        <p>&copy; <span id="currentYear"></span> Jane & John. All rights reserved.</p>
-        <p class="mt-1">Made with ❤️</p>
+    <!-- Footer -->
+    <footer class="w-full text-center mt-16 py-10 border-t border-zinc-200 text-zinc-600">
+        <div class="container mx-auto px-6 max-w-3xl flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+             <div class="text-sm">
+                 <p class="font-bold">Romina</p>
+                 <p>(+34) 633 38 60 62</p>
+             </div>
+              <div class="text-sm">
+                 <p class="font-bold">Eduard</p>
+                 <p>(+34) 673 61 25 42</p>
+             </div>
+             <div class="text-sm">
+                 <p class="font-bold">Email</p>
+                 <p>romi.edu.duta@gmail.com</p>
+             </div>
+        </div>
+        <p class="mt-8 text-xs">© <span id="currentYear"></span> Romina & Eduard. Hecho con ❤️</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Tailwind CSS Customization (Optional)
+        // Tailwind CSS Customization
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'cream-100': '#F5F5DC', // A lighter cream
-                        'cream-200': '#E8D8C4', // A slightly darker cream
-                        'brown-500': '#A0522D', // Sienna
-                        'brown-600': '#8B4513', // SaddleBrown
-                        'brown-700': '#704214', // A deeper brown for text/accents
-                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        script: ['Pinyon Script', 'cursive'],
                     }
                 }
-            }
+            },
+            plugins: [
+                // We need this plugin for the form styles and aspect-ratio
+                // This is included by default in the Tailwind CLI, but needed for the CDN
+                tailwind.plugins.forms,
+                tailwind.plugins.aspectRatio,
+            ],
         }
     </script>
+    <script src="script.js"></script>
+
 </body>
 </html>

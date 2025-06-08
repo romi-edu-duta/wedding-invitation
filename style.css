@@ -1,50 +1,8 @@
-/* style.css - You can add custom CSS here if needed, but Tailwind CSS will handle most styling. */
+/* You can leave this file empty. All styles are handled by Tailwind CSS. */
+/* Or you can add small tweaks here if needed. */
 
-/* Example: Custom styles for elements not easily handled by Tailwind or for overrides */
 body {
-    /* The font-sans class from Tailwind will apply Inter, this is just an example */
-    /* font-family: 'Inter', sans-serif; */
-    /* background-color: #F5F5DC; /* This is handled by Tailwind bg-cream-100 */
-}
-
-h1, h2, h3 {
-    /* The font-serif class from Tailwind will apply Playfair Display */
-    /* font-family: 'Playfair Display', serif; */
-}
-
-/* Google Form Responsiveness */
-#google-form-wrapper {
-    max-width: 720px; /* Adjust this: sets the maximum width of the form on large screens. */
-    margin-left: auto;
-    margin-right: auto; /* These two center the wrapper on the page. */
-    overflow: hidden;   /* Helps contain the iframe if it tries to be wider than the wrapper. */
-    border-radius: 8px; /* Optional: if you want rounded corners for the form area */
-}
-
-#google-form-iframe {
-    width: 100%;         /* Makes the iframe take the full width of #google-form-wrapper. */
-    min-height: 700px;   /* STARTING POINT: Adjust based on your form's length. */
-                         /* This is crucial. You might need to increase it. */
-    border: none;        /* Removes any default iframe border. */
-    display: block;      /* Can help prevent extra space below the iframe. */
-}
-
-/* Adjustments for different screen sizes */
-@media (max-width: 767px) { /* For tablets and larger mobile phones */
-    #google-form-wrapper {
-        /* On smaller screens, you might not need to restrict max-width as much,
-           or your page padding might already handle it. */
-        /* If your main content area has padding, this wrapper will sit within it. */
-    }
-    #google-form-iframe {
-        min-height: 750px; /* Forms often need more vertical space on mobile as elements stack. */
-                           /* EXPERIMENT with this value. */
-    }
-}
-
-@media (max-width: 480px) { /* For smaller mobile phones */
-    #google-form-iframe {
-        min-height: 850px; /* Likely needs even more height. */
-                           /* EXPERIMENT with this value. */
-    }
+  /* This improves font rendering on most browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
