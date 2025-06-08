@@ -16,6 +16,22 @@
         
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Cargamos Tailwind Y sus plugins directamente desde la URL -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Neue-Machina', 'Inter', 'ui-sans-serif', 'system-ui'],
+                        
+                        script: ['PP-Playground', 'Pinyon Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-white text-zinc-800 font-sans antialiased">
 
@@ -182,24 +198,6 @@
     </footer>
 
     <!-- Scripts -->
-    <!-- Cargamos Tailwind Y sus plugins directamente desde la URL -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Neue-Machina', 'Inter', 'ui-sans-serif', 'system-ui'],
-                        
-                        script: ['PP-Playground', 'Pinyon Script', 'cursive'],
-                    }
-                }
-            }
-        }
-    </script>
-
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
