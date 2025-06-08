@@ -9,7 +9,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+        
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -184,11 +188,11 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        // 'sans' será tu fuente tipo máquina de escribir
-                        sans: ['Neue Machina', 'ui-sans-serif', 'system-ui'],
+                        // 1º Intenta 'MiFuenteMaquina', 2º 'Inter', 3º una genérica
+                        sans: ['MiFuenteMaquina', 'Inter', 'ui-sans-serif', 'system-ui'],
                         
-                        // 'script' será tu fuente sofisticada
-                        script: ['PP Playground', 'serif'],
+                        // 1º Intenta 'MiFuenteSofisticada', 2º 'Pinyon Script', 3º una genérica
+                        script: ['MiFuenteSofisticada', 'Pinyon Script', 'cursive'],
                     }
                 }
             }
