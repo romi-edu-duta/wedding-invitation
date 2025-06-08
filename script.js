@@ -5,30 +5,59 @@ document.addEventListener('DOMContentLoaded', function() {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    const attendingSelect = document.getElementById('attending');
+    const guestsWrapper = document.getElementById('guests-wrapper');
+    const dietWrapper = document.getElementById('dietaryRestrictions-wrapper');
+    const songWrapper = document.getElementById('song-wrapper');
+    const guestsInput = document.getElementById('guests');
+
+    if (attendingSelect && guestsWrapper && guestsInput) {
+        // Ocultar el campo de acompañantes al cargar la página
+        guestsWrapper.style.display = 'none';
+        dietWrapper.style.display = 'none';
+        songWrapper.style.display = 'none';
+
+        attendingSelect.addEventListener('change', function() {
+            if (this.value === 'Sí') {
+                // Si asiste, muestra el campo y pon el mínimo en 1 (ellos mismos)
+                guestsWrapper.style.display = 'block';
+                dietWrapper.style.display = 'block';
+                songWrapper.style.display = 'block';
+                guestsInput.value = '1';
+                guestsInput.min = '1';
+            } else {
+                // Si no asiste, oculta el campo y resetea el valor a 0
+                guestsWrapper.style.display = 'none';
+                dietWrapper.style.display = 'none';
+                songWrapper.style.display = 'none';
+                guestsInput.value = '0';
+                guestsInput.min = '0';
+            }
+        });
+    }
+
     // --- Custom Google Form Submission ---
     const rsvpForm = document.getElementById('customRsvpForm');
     const formStatus = document.getElementById('form-status');
     const submitButton = document.getElementById('submitRsvpButton');
 
+    let isSubmitting = false;
+
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', function (e) {
-            // This is the most important line. It stops the page from reloading.
             e.preventDefault(); 
 
-            // --- THIS IS THE LINE YOU MUST UPDATE ---
-            // I've already filled it in for you using your form's ID.
+            if (isSubmitting) return;
+            
             const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/formResponse';
 
-            // Collect all the data from the form
             const formData = new FormData(rsvpForm);
             
-            // Update the button and status message to show it's working
             if(submitButton) submitButton.disabled = true;
             if(submitButton) submitButton.textContent = 'Enviando...';
             if(formStatus) formStatus.textContent = '';
 
 
-            // Use the "fetch" API to send the data to Google Forms in the background
             fetch(formActionURL, {
                 method: 'POST',
                 body: formData,
@@ -48,6 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(formStatus) formStatus.style.color = 'red'; // Use an error color
                 if(submitButton) submitButton.textContent = 'ENVIAR CONFIRMACIÓN';
                 if(submitButton) submitButton.disabled = false;
+            })
+            .finally(() => {
+                isSubmitting = false;
             });
         });
     } else {
