@@ -74,7 +74,7 @@
         url('fonts/PPPlayground-Thin.woff') format('woff'),
         url('fonts/PPPlayground-Thin.ttf') format('truetype');
     font-weight: 100;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -84,7 +84,7 @@
         url('fonts/PPPlayground-Light.woff') format('woff'),
         url('fonts/PPPlayground-Light.ttf') format('truetype');
     font-weight: 300;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -94,7 +94,7 @@
         url('fonts/PPPlayground-Medium.woff') format('woff'),
         url('fonts/PPPlayground-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
