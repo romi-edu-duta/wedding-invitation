@@ -84,5 +84,50 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,    // La animación solo ocurre una vez
     });
 
+    function launchConfetti() {
+    const duration = 2 * 1000; // El confeti desaparecerá después de 5 segundos
+    const animationEnd = Date.now() + duration;
+    
+    // Colores elegantes que coinciden con tu paleta de zinc/grises y un toque dorado
+    const colors = ['#e5e7eb', '#a3a3a3', '#525252', '#800000'];
+
+    function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+        return clearInterval(interval);
+        }
+
+        const particleCount = 50 * (timeLeft / duration);
+        
+        // Lanzar desde la izquierda
+        confetti({
+        particleCount: particleCount,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.7 }, // Origen en el lado izquierdo
+        colors: colors
+        });
+
+        // Lanzar desde la derecha
+        confetti({
+        particleCount: particleCount,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.7 }, // Origen en el lado derecho
+        colors: colors
+        });
+
+    }, 250);
+    }
+
+    // Lanza el confeti tan pronto como el script se carga
+    launchConfetti();
+
+
     console.log("Website script loaded and form handler is active.");
 });
