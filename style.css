@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Regular.woff2') format('woff2'),
         url('fonts/NeueMachina-Regular.woff') format('woff'),
         url('fonts/NeueMachina-Regular.ttf') format('truetype');
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Bold.woff2') format('woff2'),
         url('fonts/NeueMachina-Bold.woff') format('woff'),
         url('fonts/NeueMachina-Bold.ttf') format('truetype');
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Black.woff2') format('woff2'),
         url('fonts/NeueMachina-Black.woff') format('woff'),
         url('fonts/NeueMachina-Black.ttf') format('truetype');
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Medium.woff2') format('woff2'),
         url('fonts/NeueMachina-Medium.woff') format('woff'),
         url('fonts/NeueMachina-Medium.ttf') format('truetype');
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Light.woff2') format('woff2'),
         url('fonts/NeueMachina-Light.woff') format('woff'),
         url('fonts/NeueMachina-Light.ttf') format('truetype');
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
         url('fonts/NeueMachina-Ultrabold.woff') format('woff'),
         url('fonts/NeueMachina-Ultrabold.ttf') format('truetype');
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Machina';
+    font-family: Neue-Machina;
     src: url('fonts/NeueMachina-Ultralight.woff2') format('woff2'),
         url('fonts/NeueMachina-Ultralight.woff') format('woff'),
         url('fonts/NeueMachina-Ultralight.ttf') format('truetype');
@@ -69,7 +69,7 @@
 }
 
 @font-face {
-    font-family: 'PP Playground';
+    font-family: PP-Playground;
     src: url('fonts/PPPlayground-Thin.woff2') format('woff2'),
         url('fonts/PPPlayground-Thin.woff') format('woff'),
         url('fonts/PPPlayground-Thin.ttf') format('truetype');
@@ -79,7 +79,7 @@
 }
 
 @font-face {
-    font-family: 'PP Playground';
+    font-family: PP-Playground;
     src: url('fonts/PPPlayground-Light.woff2') format('woff2'),
         url('fonts/PPPlayground-Light.woff') format('woff'),
         url('fonts/PPPlayground-Light.ttf') format('truetype');
@@ -89,7 +89,7 @@
 }
 
 @font-face {
-    font-family: 'PP Playground';
+    font-family: PP-Playground;
     src: url('fonts/PPPlayground-Medium.woff2') format('woff2'),
         url('fonts/PPPlayground-Medium.woff') format('woff'),
         url('fonts/PPPlayground-Medium.ttf') format('truetype');
