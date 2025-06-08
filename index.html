@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="bg-white text-zinc-800 font-sans antialiased">
 
@@ -33,7 +34,7 @@
         <!-- Spacer -->
         <hr class="w-24 border-zinc-200 my-12">
 
-        <section id="countdown" class="w-full text-center my-16">
+        <section id="countdown" data-aos="fade-up" class="w-full text-center my-16">
             <h3 class="font-script text-4xl text-zinc-800 mb-6">Faltan...</h3>
             <div class="grid grid-cols-4 gap-4 max-w-sm mx-auto">
                 <div>
@@ -59,7 +60,7 @@
         <hr class="w-24 border-zinc-200 my-12">
 
         <!-- Details Section -->
-        <section id="details" class="w-full flex flex-col items-center my-8">
+        <section id="details" data-aos="fade-up" class="w-full flex flex-col items-center my-8">
             <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Lugar, fecha y hora:</h2>
             <div class="mt-8 text-xl leading-relaxed text-zinc-800">
                 <p>28 de Diciembre, 2025</p>
@@ -71,7 +72,7 @@
               
               
         <!-- Map Section -->
-        <section id="map" class="w-full my-12">
+        <section id="map" data-aos="fade-up" data-aos-delay="200" class="w-full my-12">
             <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4"></h3>
             
             <a 
@@ -101,7 +102,7 @@
         <!-- Prefilled link:
          https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?usp=pp_url&entry.1869319172=nombre&entry.1380771300=S%C3%AD&entry.179393330=2&entry.1382048514=restricciones&entry.1670016670=cancion&entry.1518536853=mensaje
          -->
-        <section id="rsvp" class="w-full flex flex-col items-center my-8">
+        <section id="rsvp" data-aos="fade-up" data-aos-delay="200" class="w-full flex flex-col items-center my-8">
             <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Confirmar Asistencia</h2>
             <p class="mt-4 max-w-md text-zinc-700">
                 Por favor, confírmanos tu asistencia antes del <br><br>1 de Noviembre de 2025. <br><br>¡Nos haría muchísima ilusión celebrar este día contigo!
@@ -195,6 +196,8 @@
     </script>
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 </html>

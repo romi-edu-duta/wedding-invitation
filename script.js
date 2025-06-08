@@ -79,5 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const countdownInterval = setInterval(updateCountdown, 1000);
 
+    AOS.init({
+        duration: 800, // Duración de la animación en milisegundos
+        once: true,    // La animación solo ocurre una vez
+    });
+
     console.log("Website script loaded and form handler is active.");
 });
