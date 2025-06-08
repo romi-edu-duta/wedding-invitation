@@ -47,14 +47,24 @@
             </div>
         </section>
 
+              
         <!-- Map Section -->
         <section id="map" class="w-full my-12">
-             <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4">Ubicación</h3>
-             <div class="aspect-w-16 aspect-h-9 bg-zinc-100 rounded-md flex items-center justify-center">
-                 <!-- Replace this div with your Google Maps embed iframe -->
-                 <p class="text-zinc-500">El mapa de Google aparecerá aquí</p>
-             </div>
+            <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4">Ubicación</h3>
+            
+            <div class="relative aspect-w-16 aspect-h-9 rounded-md overflow-hidden shadow-md">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.053784993604!2d-0.6286903241768118!3d38.60163226410161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63d576857fe5cb%3A0x41a1a2e43bd160ac!2sCaseta%20Nova%20by%20Natxo%20Sell%C3%A9s!5e0!3m2!1sen!2sfr!4v1749382518682!5m2!1sen!2sfr" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="absolute inset-0 w-full h-full"
+                    title="Mapa de la ubicación de la boda">
+                </iframe>
+            </div>
         </section>
+
+    
 
         <!-- Spacer -->
         <hr class="w-24 border-zinc-200 my-12">
@@ -137,9 +147,11 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cargamos Tailwind Y sus plugins directamente desde la URL -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
+    
     <script>
-        // Tailwind CSS Customization
+        // La configuración ya no necesita el bloque de plugins
         tailwind.config = {
             theme: {
                 extend: {
@@ -148,15 +160,10 @@
                         script: ['Pinyon Script', 'cursive'],
                     }
                 }
-            },
-            plugins: [
-                // We need this plugin for the form styles and aspect-ratio
-                // This is included by default in the Tailwind CLI, but needed for the CDN
-                tailwind.plugins.forms,
-                tailwind.plugins.aspectRatio,
-            ],
+            }
         }
     </script>
+
     <script src="script.js"></script>
 
 </body>
