@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Set language to Spanish -->
+<html lang="es"> <!-- This will be updated by JS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romina & Eduard | Nuestra Boda</title>
+    <title data-translate-key="pageTitle">Romina & Eduard | Nuestra Boda</title>
 
     <link rel="preload" href="fonts/PPPlayground-Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/PPPlayground-Medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -37,24 +37,49 @@
             }
         }
     </script>
+    <!-- Add custom styles for language switcher -->
+    <style>
+        .lang-switcher button {
+            transition: all 0.2s ease-in-out;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .lang-switcher button.active {
+            font-weight: bold;
+            border-color: #a3a3a3; /* zinc-400 */
+            background-color: #f5f5f5; /* zinc-100 */
+        }
+        .lang-switcher button:not(.active):hover {
+            background-color: #e5e5e5; /* zinc-200 */
+        }
+    </style>
 </head>
 <body class="bg-white text-zinc-800 font-sans antialiased">
+
+    <!-- Language Switcher -->
+    <div id="language-switcher" class="lang-switcher fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-1 rounded-md shadow-sm flex space-x-1">
+        <button data-lang="es">ES</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ro">RO</button>
+    </div>
+
 
     <!-- Main container to center the content -->
     <main class="container mx-auto px-6 py-16 max-w-2xl flex flex-col items-center text-center">
 
         <!-- Header Section -->
         <header class="w-full flex flex-col items-center">
-            <p class="text-3xl tracking-wider text-zinc-600 font-script font-light">28 - Diciembre - 2025</p>
+            <p class="text-3xl tracking-wider text-zinc-600 font-script font-light" data-translate-key="headerDate">28 - Diciembre - 2025</p>
             <!-- Space between date and name -->
             <hr class="my-4">
             <h1 class="font-script font-[500] text-7xl md:text-9xl my-4 text-zinc-900" style="line-height: 0.8;">Romina & Eduard</h1>
             
-            <img src="assets/couple-drawing.svg" alt="Ilustración de Romina y Eduard" class="w-96 md:w-[64rem] my-8">
+            <img src="assets/couple-drawing.svg" data-translate-alt="coupleDrawingAlt" alt="Ilustración de Romina y Eduard" class="w-96 md:w-[64rem] my-8">
 
             <div class="my-4 text-zinc-700">
-                <p class="font-sans">"Con amor eterno te he amado"</p>
-                <p class="mt-1" style="line-height: 0.8;">Jeremías 31:3</p>
+                <p class="font-sans" data-translate-key="bibleVerse">"Con amor eterno te he amado"</p>
+                <p class="mt-1" style="line-height: 0.8;" data-translate-key="bibleReference">Jeremías 31:3</p>
             </div>
         </header>
 
@@ -62,23 +87,23 @@
         <hr class="w-24 border-zinc-200 my-12">
 
         <section id="countdown" data-aos="fade-up" class="w-full text-center my-16">
-            <h3 class="font-script text-5xl md:text-6xl text-zinc-800 mb-6">Cuenta atrás</h3>
+            <h3 class="font-script text-5xl md:text-6xl text-zinc-800 mb-6" data-translate-key="countdownTitle">Cuenta atrás</h3>
             <div class="grid grid-cols-4 gap-4 max-w-lg mx-auto">
                 <div>
                     <div id="days" class="font-sans text-4xl md:text-5xl font-bold text-zinc-900">000</div>
-                    <div class="font-sans text-lg md:text-xl text-zinc-700">Días</div>
+                    <div class="font-sans text-lg md:text-xl text-zinc-700" data-translate-key="countdownDays">Días</div>
                 </div>
                 <div>
                     <div id="hours" class="font-sans text-4xl md:text-5xl font-bold text-zinc-900">00</div>
-                    <div class="font-sans text-lg md:text-xl text-zinc-700">Horas</div>
+                    <div class="font-sans text-lg md:text-xl text-zinc-700" data-translate-key="countdownHours">Horas</div>
                 </div>
                 <div>
                     <div id="minutes" class="font-sans text-4xl md:text-5xl font-bold text-zinc-900">00</div>
-                    <div class="font-sans text-lg md:text-xl text-zinc-700">Minutos</div>
+                    <div class="font-sans text-lg md:text-xl text-zinc-700" data-translate-key="countdownMinutes">Minutos</div>
                 </div>
                 <div>
                     <div id="seconds" class="font-sans text-4xl md:text-5xl font-bold text-zinc-900">00</div>
-                    <div class="font-sans text-lg md:text-xl text-zinc-700">Segundos</div>
+                    <div class="font-sans text-lg md:text-xl text-zinc-700" data-translate-key="countdownSeconds">Segundos</div>
                 </div>
             </div>
         </section>
@@ -88,92 +113,71 @@
 
         <!-- Details Section -->
         <section id="details" data-aos="fade-up" class="w-full flex flex-col items-center my-8">
-            <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Lugar, fecha y hora:</h2>
+            <h2 class="font-script text-5xl md:text-6xl text-zinc-900" data-translate-key="detailsTitle">Lugar, fecha y hora:</h2>
             <div class="mt-8 leading-relaxed text-zinc-800">
-                <p>28 de Diciembre, 2025</p>
-                <p>Caseta Nova, Castalla, Alicante</p>
-                <p>11:30 horas</p>
+                <p data-translate-key="detailsDate">28 de Diciembre, 2025</p>
+                <p data-translate-key="detailsLocation">Caseta Nova, Castalla, Alicante</p>
+                <p data-translate-key="detailsTime">11:30 horas</p>
             </div>
         </section>
-
-              
               
         <!-- Map Section -->
         <section id="map" data-aos="fade-up" data-aos-delay="200" class="w-full my-12">
-            <h3 class="text-2xl font-bold tracking-tight text-zinc-900 mb-4"></h3>
-            
-            <a 
-                href="https://maps.app.goo.gl/q1GyP2qkib7NrXRC9" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="block group w-full rounded-md overflow-visible p-4" 
-                aria-label="Abrir la ubicación en Google Maps"
-            >
-                <img 
-                    src="assets/mapa.svg" 
-                    alt="Mapa dibujado de la ubicación. Haz clic para abrir en Google Maps." 
-                    class="w-full h-auto object-contain bg-white transition-transform duration-300 group-hover:scale-105 rounded-md"
-                >
+            <a href="https://maps.app.goo.gl/q1GyP2qkib7NrXRC9" target="_blank" rel="noopener noreferrer" class="block group w-full rounded-md overflow-visible p-4" aria-label="Abrir la ubicación en Google Maps">
+                <img src="assets/mapa.svg" data-translate-alt="mapAlt" alt="Mapa dibujado de la ubicación. Haz clic para abrir en Google Maps." class="w-full h-auto object-contain bg-white transition-transform duration-300 group-hover:scale-105 rounded-md">
             </a>
-            <p class="text-center text-xs text-zinc-600 mt-4">
+            <p class="text-center text-xs text-zinc-600 mt-4" data-translate-key="mapCaption">
                 Haz clic en la imagen para ver la ruta en Google Maps.
             </p>
         </section>
-
     
-
         <!-- Spacer -->
         <hr class="w-24 border-zinc-200 my-12">
 
         <!-- RSVP Section -->
-        <!-- Prefilled link:
-         https://docs.google.com/forms/d/e/1FAIpQLSfeosnC-Ccddo4jXWHGtjBvNQ6l_EYRRwCg8OjUK0PeNZ5dtA/viewform?usp=pp_url&entry.1869319172=nombre&entry.1380771300=S%C3%AD&entry.179393330=2&entry.1382048514=restricciones&entry.1670016670=cancion&entry.1518536853=mensaje
-         -->
         <section id="rsvp" data-aos="fade-up" data-aos-delay="200" class="w-full flex flex-col items-center my-8">
-            <h2 class="font-script text-5xl md:text-6xl text-zinc-900">Confirmar Asistencia</h2>
-            <p class="mt-4 max-w-md text-zinc-700">
+            <h2 class="font-script text-5xl md:text-6xl text-zinc-900" data-translate-key="rsvpTitle">Confirmar Asistencia</h2>
+            <p class="mt-4 max-w-md text-zinc-700" data-translate-key="rsvpIntro">
                 Por favor, confírmanos tu asistencia antes del <br>1 de Noviembre de 2025. <br>¡Nos haría muchísima ilusión <br>celebrar este día contigo!
             </p>
 
-            <!-- Custom Form pointing to Google Forms -->
-            <!-- Remember to replace the 'name' attributes with your own 'entry.XXXX' IDs -->
             <form id="customRsvpForm" class="w-full max-w-lg space-y-8 mt-10 text-left">
                 <div>
-                    <label for="guestName" class="block text-sm font-medium text-zinc-700">Nombre(s)</label>
+                    <label for="guestName" class="block text-sm font-medium text-zinc-700" data-translate-key="formNameLabel">Nombre(s)</label>
                     <input type="text" name="entry.1869319172" id="guestName" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
 
                 <div>
-                    <label for="attending" class="block text-sm font-medium text-zinc-700">¿Nos acompañarás?</label>
+                    <label for="attending" class="block text-sm font-medium text-zinc-700" data-translate-key="formAttendingLabel">¿Nos acompañarás?</label>
                     <select id="attending" name="entry.1380771300" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
-                        <option value="">Por favor, selecciona...</option>
-                        <option value="Sí">Sí, con mucha ilusión</option>
-                        <option value="No">No, pero estaré en espíritu</option>
+                        <option value="" data-translate-key="formAttendingOptionDefault">Por favor, selecciona...</option>
+                        <option value="Sí" data-translate-key="formAttendingOptionYes">Sí, con mucha ilusión</option>
+                        <option value="No" data-translate-key="formAttendingOptionNo">No, pero estaré en espíritu</option>
                     </select>
                 </div>
 
                 <div id="guests-wrapper">
-                    <label for="guests" class="block text-sm font-medium text-zinc-700">Número de acompañantes</label>
+                    <label for="guests" class="block text-sm font-medium text-zinc-700" data-translate-key="formGuestsLabel">Número de acompañantes</label>
                     <input type="number" name="entry.179393330" id="guests" min="0" max="5" value="0" required class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
 
                 <div id="dietaryRestrictions-wrapper">
-                    <label for="dietaryRestrictions" class="block text-sm font-medium text-zinc-700">¿Tienes alguna restricción alimentaria?</label>
+                    <label for="dietaryRestrictions" class="block text-sm font-medium text-zinc-700" data-translate-key="formDietLabel">¿Tienes alguna restricción alimentaria?</label>
                     <input type="text" name="entry.1382048514" id="dietaryRestrictions" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
 
                 <div id="song-wrapper">
-                    <label for="song" class="block text-sm font-medium text-zinc-700">Dinos si quieres que añadamos alguna canción a la playlist</label>
+                    <label for="song" class="block text-sm font-medium text-zinc-700" data-translate-key="formSongLabel">Dinos si quieres que añadamos alguna canción a la playlist</label>
                     <input type="text" name="entry.1670016670" id="song" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition">
                 </div>
                 
                  <div>
-                    <label for="message" class="block text-sm font-medium text-zinc-700">¿Tienes algún mensaje para nosotros? Te leemos</label>
+                    <label for="message" class="block text-sm font-medium text-zinc-700" data-translate-key="formMessageLabel">¿Tienes algún mensaje para nosotros? Te leemos</label>
                     <textarea id="message" name="entry.1518536853" rows="3" class="mt-1 block w-full bg-transparent border-0 border-b-2 border-zinc-300 focus:ring-0 focus:border-zinc-800 transition"></textarea>
                 </div>
 
                 <div>
-                    <button type="submit" id="submitRsvpButton" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-zinc-800 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500 transition">
+                    <button type="submit" id="submitRsvpButton" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-zinc-800 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500 transition" data-translate-key="formSubmitButton">
                         ENVIAR CONFIRMACIÓN
                     </button>
                 </div>
@@ -199,13 +203,16 @@
                  <p>romi.edu.duta@gmail.com</p>
              </div>
         </div>
-        <p class="mt-8 text-xs">© <span id="currentYear"></span> Romina & Eduard. Hecho con ❤️</p>
+        <p class="mt-8 text-xs">© <span id="currentYear"></span> Romina & Eduard. <span data-translate-key="footerMadeWith">Hecho con ❤️</span></p>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Load translation data FIRST -->
+    <script src="translations.js"></script>
+    <!-- Then load the main script -->
     <script src="script.js"></script>
 
 </body>
