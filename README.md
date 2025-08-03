@@ -4,8 +4,6 @@ Welcome to the GitHub repository for our wedding invitation website! We created 
 
 This project was built with love.
 
-![Screenshot of the wedding website](https://romi-edu-duta.github.io/wedding-invitation/assets/social-share.png)
-
 **Live Site:** [**https://romi-edu-duta.github.io/wedding-invitation/**](https://romi-edu-duta.github.io/wedding-invitation/)
 
 ---
