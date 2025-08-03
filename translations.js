@@ -31,7 +31,7 @@ const translations = {
 
         // RSVP
         rsvpTitle: "Confirm Attendance",
-        rsvpIntro: "Please confirm your attendance by <br>November 1, 2025. <br>We would be thrilled to <br>celebrate this day with you!",
+        rsvpIntro: "Please confirm your attendance <br>by November 1, 2025. <br>We would be thrilled to <br>celebrate this day with you!",
         
         // Form Fields
         formNameLabel: "Name(s)",
@@ -84,7 +84,7 @@ const translations = {
         
         // RSVP
         rsvpTitle: "Confirmar Asistencia",
-        rsvpIntro: "Por favor, confírmanos tu asistencia antes del <br>1 de Noviembre de 2025. <br>¡Nos haría muchísima ilusión <br>celebrar este día contigo!",
+        rsvpIntro: "Por favor, confírmanos tu asistencia <br>antes del 1 de Noviembre de 2025. <br>¡Nos haría muchísima ilusión <br>celebrar este día contigo!",
         
         // Form Fields
         formNameLabel: "Nombre(s)",
@@ -137,7 +137,7 @@ const translations = {
         
         // RSVP
         rsvpTitle: "Confirmă prezența",
-        rsvpIntro: "Te rugăm să confirmi prezența până la <br>1 Noiembrie 2025. <br>Ne-ar face o deosebită plăcere <br>să sărbătorim această zi cu tine!",
+        rsvpIntro: "Te rugăm să confirmi prezența <br>până la 1 Noiembrie 2025. <br>Ne-ar face o deosebită plăcere <br>să sărbătorim această zi cu tine!",
         
         // Form Fields
         formNameLabel: "Nume(le)",
