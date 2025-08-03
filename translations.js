@@ -23,7 +23,7 @@ const translations = {
         detailsTitle: "Place, date and time:",
         detailsDate: "December 28, 2025",
         detailsLocation: "Caseta Nova, Castalla, Alicante",
-        detailsTime: "11:30 hours",
+        detailsTime: "12:00 hours",
 
         // Map
         mapAlt: "Drawn map of the location. Click to open in Google Maps.",
@@ -76,7 +76,7 @@ const translations = {
         detailsTitle: "Lugar, fecha y hora:",
         detailsDate: "28 de Diciembre, 2025",
         detailsLocation: "Caseta Nova, Castalla, Alicante",
-        detailsTime: "11:30 horas",
+        detailsTime: "12:00 horas",
 
         // Map
         mapAlt: "Mapa dibujado de la ubicación. Haz clic para abrir en Google Maps.",
@@ -129,7 +129,7 @@ const translations = {
         detailsTitle: "Locul, data și ora:",
         detailsDate: "28 Decembrie 2025",
         detailsLocation: "Caseta Nova, Castalla, Alicante",
-        detailsTime: "11:30",
+        detailsTime: "12:00",
 
         // Map
         mapAlt: "Harta desenată a locației. Click pentru a deschide în Google Maps.",
