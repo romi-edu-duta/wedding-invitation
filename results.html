@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganadores | Romina & Eduard</title>
+    <title data-translate-key="resultsPageTitle">Ganadores | Romina & Eduard</title>
     
     <link rel="icon" href="assets/iconcito.svg" type="image/svg+xml">
-
-    <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
-    <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,9 +22,7 @@
             }
         }
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    
     <style>
         .blur-reveal {
             filter: blur(12px);
@@ -38,21 +33,12 @@
             background-color: #f4f4f5;
             color: transparent;
         }
-        .blur-reveal:hover {
-            opacity: 0.8;
-            filter: blur(8px);
-        }
+        .blur-reveal:hover { opacity: 0.8; filter: blur(8px); }
         .revealed {
-            filter: blur(0);
-            opacity: 1;
-            background-color: transparent;
-            color: #18181b;
-            cursor: default;
+            filter: blur(0); opacity: 1; background-color: transparent;
+            color: #18181b; cursor: default;
         }
-        @keyframes gentle-pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        @keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .loading-text { animation: gentle-pulse 2s infinite; }
     </style>
 </head>
@@ -60,21 +46,21 @@
 
     <!-- Back Button -->
     <div class="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-1 rounded-md shadow-sm">
-        <a href="index.html" class="px-3 py-1 text-sm font-bold text-zinc-400 hover:text-zinc-800 transition">Volver</a>
+        <a href="index.html" class="px-3 py-1 text-sm font-bold text-zinc-400 hover:text-zinc-800 transition" data-translate-key="btnBack">Volver</a>
     </div>
 
     <main class="container mx-auto px-6 py-16 max-w-5xl text-center">
         
         <!-- Header -->
         <header class="w-full flex flex-col items-center mb-16">
-            <p class="text-2xl tracking-wider text-zinc-600 font-script font-light">Wedding Awards</p>
+            <p class="text-2xl tracking-wider text-zinc-600 font-script font-light" data-translate-key="awardsHeader">Wedding Awards</p>
             <hr class="my-4 w-12 border-zinc-200">
-            <h1 class="font-script font-[500] text-7xl md:text-8xl my-4 text-zinc-900" style="line-height: 0.9;">And the winner is...</h1>
+            <h1 class="font-script font-[500] text-7xl md:text-8xl my-4 text-zinc-900" style="line-height: 0.9;" data-translate-key="resultsHeader">And the winner is...</h1>
         </header>
 
         <!-- Loading -->
         <div id="loading" class="flex flex-col items-center justify-center space-y-4 my-20">
-            <div class="loading-text font-script text-4xl text-zinc-400">Contando votos...</div>
+            <div class="loading-text font-script text-4xl text-zinc-400" data-translate-key="resultsLoading">Contando votos...</div>
         </div>
 
         <!-- Error -->
@@ -85,29 +71,6 @@
             <!-- Injected by JS -->
         </div>
 
-        <!-- Debug Table (Hidden by default, useful for verifying) -->
-        <div class="mt-24 border-t border-zinc-100 pt-10 w-full" style="display: none;">
-            <h3 class="text-zinc-400 text-sm uppercase tracking-widest mb-4">Registro de Votos (Debug)</h3>
-            <div class="overflow-x-auto">
-                <table class="min-w-full text-xs text-left text-zinc-500">
-                    <thead class="bg-zinc-50 font-bold">
-                        <tr>
-                            <th class="px-4 py-2">Timestamp</th>
-                            <th class="px-4 py-2">Usuario (ID)</th>
-                            <th class="px-4 py-2">El Terremoto</th>
-                            <th class="px-4 py-2">Look</th>
-                            <th class="px-4 py-2">Lágrima</th>
-                            <th class="px-4 py-2">Paparazzi</th>
-                        </tr>
-                    </thead>
-                    <tbody id="debugTableBody" class="divide-y divide-zinc-100">
-                        <!-- JS will put rows here -->
-                    </tbody>
-                </table>
-            </div>
-            <p class="text-[10px] text-zinc-300 mt-2">Mostrando solo el último voto válido por usuario.</p>
-        </div>
-
         <!-- Refresh -->
         <button onclick="window.location.reload()" class="mt-10 opacity-30 hover:opacity-100 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +79,7 @@
         </button>
 
     </main>
-
+    <script src="translations.js"></script>
     <script src="results.js"></script>
 </body>
 </html>

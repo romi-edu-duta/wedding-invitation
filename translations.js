@@ -52,7 +52,51 @@ const translations = {
         formStatusError: "Oops! Something went wrong. Please try again.",
 
         // Footer
-        footerMadeWith: "Made with ❤️"
+        footerMadeWith: "Made with ❤️",
+
+        // --- AWARDS PAGE ---
+        awardsPageTitle: "Wedding Awards | Romina & Eduard",
+        awardsHeader: "Wedding Awards",
+        awardsIntro: "Welcome to our Wedding Oscars!<br>Help us choose the stars of the night.<br><span class=\"text-xs text-zinc-400\">(Type a guest's name to search)</span>",
+        
+        // Categories
+        cat1Title: "The Earthquake",
+        cat1Desc: "King/Queen of the dancefloor or Life of the party",
+        cat2Title: "Most Spectacular Look",
+        cat2Desc: "The outfit that left you speechless",
+        cat3Title: "Easy Tears",
+        cat3Desc: "Who got the most emotional",
+        cat4Title: "Official Paparazzi",
+        cat4Desc: "Always with the phone recording stories",
+        
+        // Awards Form
+        placeholderName: "Type or select...",
+        btnSubmit: "SUBMIT VOTES",
+        btnUpdate: "UPDATE MY VOTES",
+        btnSaving: "Saving...",
+        editHint: "You can edit your votes as many times as you want. Only the last one counts.",
+        
+        // Awards Status
+        statusErrorEmpty: "Please fill in all categories.",
+        statusErrorList: "Please select valid names from the list.",
+        statusErrorGeneric: "An error occurred. Please try again.",
+        statusSuccess: "Votes saved! You can close this page or edit if you change your mind.",
+        noMatches: "No matches found",
+
+        // Success Screen
+        successTitle: "Votes Saved!",
+        successMsg: "Thanks for participating.<br>We will announce the winners at the end of the night.",
+        backHome: "Back to Home",
+
+        // --- RESULTS PAGE ---
+        resultsPageTitle: "Winners | Romina & Eduard",
+        resultsHeader: "And the winner is...",
+        resultsLoading: "Counting votes...",
+        resultsError: "Could not load data. Check connection.",
+        resultsVotes: "Votes",
+        resultsVote: "Vote",
+        btnRefresh: "Refresh",
+        btnBack: "Back"
     },
     es: {
         // Page Metadata
@@ -105,7 +149,51 @@ const translations = {
         formStatusError: "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo.",
 
         // Footer
-        footerMadeWith: "Hecho con ❤️"
+        footerMadeWith: "Hecho con ❤️",
+
+        // --- AWARDS PAGE ---
+        awardsPageTitle: "Wedding Awards | Romina & Eduard",
+        awardsHeader: "Wedding Awards",
+        awardsIntro: "¡Bienvenidos a los Oscars de nuestra boda!<br>Ayúdanos a elegir a los protagonistas de la noche.<br><span class=\"text-xs text-zinc-400\">(Escribe el nombre del invitado para buscarlo)</span>",
+        
+        // Categories
+        cat1Title: "El Terremoto",
+        cat1Desc: "Rey de la pista o alma de la fiesta",
+        cat2Title: "Look más espectacular",
+        cat2Desc: "El outfit que te ha dejado sin palabras",
+        cat3Title: "Lágrima fácil",
+        cat3Desc: "Quien se ha emocionado más",
+        cat4Title: "El Paparazzi oficial",
+        cat4Desc: "Siempre con el móvil en la mano grabando stories",
+        
+        // Awards Form
+        placeholderName: "Escribe o selecciona...",
+        btnSubmit: "ENVIAR VOTOS",
+        btnUpdate: "ACTUALIZAR MIS VOTOS",
+        btnSaving: "Guardando...",
+        editHint: "Puedes editar tus votos tantas veces como quieras. Solo contará el último.",
+        
+        // Awards Status
+        statusErrorEmpty: "Por favor, rellena todas las categorías.",
+        statusErrorList: "Por favor, selecciona nombres válidos de la lista.",
+        statusErrorGeneric: "Hubo un error. Inténtalo de nuevo.",
+        statusSuccess: "¡Votos guardados! Puedes cerrar esta página o editar si cambias de opinión.",
+        noMatches: "No se encuentran coincidencias",
+
+        // Success Screen
+        successTitle: "¡Votos Guardados!",
+        successMsg: "Gracias por participar.<br>Anunciaremos a los ganadores al final de la noche.",
+        backHome: "Volver al inicio",
+
+        // --- RESULTS PAGE ---
+        resultsPageTitle: "Ganadores | Romina & Eduard",
+        resultsHeader: "And the winner is...",
+        resultsLoading: "Contando votos...",
+        resultsError: "No se pudieron cargar los datos. Verifica la conexión.",
+        resultsVotes: "Votos",
+        resultsVote: "Voto",
+        btnRefresh: "Actualizar",
+        btnBack: "Volver"
     },
     ro: {
         // Page Metadata

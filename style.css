@@ -105,3 +105,44 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.guest-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e4e4e7; /* zinc-200 */
+    border-radius: 0 0 0.5rem 0.5rem;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 50;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.guest-dropdown.active {
+    display: block;
+}
+
+.guest-option {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f4f4f5;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.guest-option:hover {
+    background-color: #f4f4f5;
+}
+
+/* Fix for mobile text input size */
+input.guest-input {
+    font-size: 16px !important; /* Prevents zoom on iPhone */
+}
