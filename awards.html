@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Awards | Romina & Eduard</title>
+    
+    <link rel="icon" href="assets/iconcito.svg" type="image/svg+xml">
+    
+    <!-- FONTS & STYLES (Same as index.html) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Neue-Machina', 'Inter', 'ui-sans-serif', 'system-ui'],
+                        script: ['PP-Playground', 'Pinyon Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-zinc-800 font-sans antialiased pb-20">
+
+    <!-- Language Switcher (Optional, kept for consistency) -->
+    <div id="language-switcher" class="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-1 rounded-md shadow-sm flex space-x-1">
+        <button data-lang="es" class="px-2 py-1 rounded hover:bg-zinc-100 transition">ES</button>
+        <button data-lang="en" class="px-2 py-1 rounded hover:bg-zinc-100 transition">EN</button>
+    </div>
+
+    <main class="container mx-auto px-6 py-12 max-w-xl flex flex-col items-center text-center">
+        
+        <!-- Header -->
+        <h1 class="font-script text-6xl md:text-8xl text-zinc-900 mb-4">Wedding Awards</h1>
+        <p class="text-zinc-600 mb-8 font-light leading-relaxed">
+            ¡Bienvenidos a los Oscars de nuestra boda!<br>
+            Ayúdanos a elegir a los protagonistas de la noche. <br>
+            <span class="text-xs text-zinc-400">(Escribe el nombre del invitado para buscarlo)</span>
+        </p>
+
+        <!-- Voting Form -->
+        <form id="awardsForm" class="w-full space-y-12">
+            
+            <!-- Category 1: MERGED (Dancer + Life of Party) -->
+            <div class="award-card" data-aos="fade-up">
+                <div class="mb-4">
+                    <span class="text-4xl">💃🥳</span> <!-- Merged Icons -->
+                    <h3 class="font-script text-4xl mt-2 text-zinc-800">El Terremoto</h3>
+                    <p class="text-sm text-zinc-500">Rey de la pista o alma de la fiesta</p>
+                </div>
+                <input class="guest-input w-full border-0 border-b-2 border-zinc-300 bg-transparent focus:ring-0 focus:border-zinc-800 text-center text-lg placeholder-zinc-300 transition" 
+                    list="guestListOptions" 
+                    name="entry.1706671058" 
+                    placeholder="Escribe un nombre..." 
+                    required autocomplete="off">
+            </div>
+
+            <!-- Category 2: Outfit (Same) -->
+            <div class="award-card" data-aos="fade-up">
+                <div class="mb-4">
+                    <span class="text-4xl">✨👗</span>
+                    <h3 class="font-script text-4xl mt-2 text-zinc-800">Look más espectacular</h3>
+                    <p class="text-sm text-zinc-500">El outfit que te ha dejado sin palabras</p>
+                </div>
+                <input class="guest-input w-full border-0 border-b-2 border-zinc-300 bg-transparent focus:ring-0 focus:border-zinc-800 text-center text-lg placeholder-zinc-300 transition" 
+                    list="guestListOptions" 
+                    name="entry.200205017" 
+                    placeholder="Escribe un nombre..." 
+                    required autocomplete="off">
+            </div>
+
+            <!-- Category 3: Emotional (Same) -->
+            <div class="award-card" data-aos="fade-up">
+                <div class="mb-4">
+                    <span class="text-4xl">😭❤️</span>
+                    <h3 class="font-script text-4xl mt-2 text-zinc-800">Lágrima fácil</h3>
+                    <p class="text-sm text-zinc-500">Quien se ha emocionado más</p>
+                </div>
+                <input class="guest-input w-full border-0 border-b-2 border-zinc-300 bg-transparent focus:ring-0 focus:border-zinc-800 text-center text-lg placeholder-zinc-300 transition" 
+                    list="guestListOptions" 
+                    name="entry.1436632034" 
+                    placeholder="Escribe un nombre..." 
+                    required autocomplete="off">
+            </div>
+
+            <!-- Category 4: NEW (Paparazzi) -->
+            <div class="award-card" data-aos="fade-up">
+                <div class="mb-4">
+                    <span class="text-4xl">📸🤳</span>
+                    <h3 class="font-script text-4xl mt-2 text-zinc-800">El Paparazzi oficial</h3>
+                    <p class="text-sm text-zinc-500">Siempre con el móvil en la mano grabando stories</p>
+                </div>
+                <input class="guest-input w-full border-0 border-b-2 border-zinc-300 bg-transparent focus:ring-0 focus:border-zinc-800 text-center text-lg placeholder-zinc-300 transition" 
+                    list="guestListOptions" 
+                    name="entry.2095503174" 
+                    placeholder="Escribe un nombre..." 
+                    required autocomplete="off">
+            </div>
+
+            <!-- Datalist and Button remain the same... -->
+            <datalist id="guestListOptions">
+                <!-- Javascript will populate this -->
+            </datalist>
+
+            <!-- HIDDEN INPUT FOR USER ID -->
+            <input type="hidden" id="userIdField" name="entry.1680573428">
+
+            <div class="pt-8">
+                <button type="submit" id="submitVote" class="w-full py-4 px-6 bg-zinc-900 text-white font-bold rounded-lg shadow-lg hover:bg-zinc-800 transform active:scale-95 transition-all">
+                    ENVIAR VOTOS
+                </button>
+                <!-- Change text to indicate they can update -->
+                <p id="edit-hint" class="hidden text-xs text-zinc-400 mt-2">
+                    Puedes editar tus votos tantas veces como quieras. Solo contará el último.
+                </p>
+                <div id="form-status" class="mt-4 text-center text-sm font-medium h-6"></div>
+            </div>
+        </form>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="hidden flex-col items-center justify-center min-h-[50vh]">
+            <h2 class="font-script text-6xl mb-4">¡Votos Guardados!</h2>
+            <p class="text-zinc-600 mb-8">Gracias por participar. <br>Anunciaremos a los ganadores al final de la noche.</p>
+            <a href="index.html" class="text-zinc-900 underline underline-offset-4 hover:text-zinc-600">Volver al inicio</a>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="awards.js"></script>
+</body>
+</html>
