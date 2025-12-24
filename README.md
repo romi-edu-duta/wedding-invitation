@@ -8,26 +8,7 @@ This project was built with love.
 
 ---
 
-## ✨ Features
-
-*   **Multilingual Support:** The site is fully translated into Spanish, English, and Romanian, with a simple language switcher.
-*   **Countdown Timer**
-*   **Custom Illustrations**
-*   **RSVP Form:** A custom-styled form that submits responses directly to a Google Sheet for easy tracking.
-*   **Responsive Design**
-*   **Animations** Subtle on-scroll animations powered by AOS (Animate on Scroll).
-
-## 🛠️ Tech Stack
-
-This is a static website built with simple tools:
-
-*   **HTML5**
-*   **Tailwind CSS**
-*   **Vanilla JavaScript:** For all interactivity, including the countdown, language switching, and form submission. No heavy frameworks!
-*   **AOS (Animate on Scroll):** A lightweight library for scroll animations.
-*   **Canvas-Confetti:** To celebrate a successful form submission with a fun confetti effect.
-*   **Google Fonts**
-*   **GitHub Pages:** Free and reliable hosting for a static site.
+The site is fully translated into Spanish, English, and Romanian, with a simple language switcher. A custom-styled form submits responses directly to a Google Sheet.
 
 ---
 
