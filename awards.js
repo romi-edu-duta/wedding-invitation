@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Ángela Abigail García López", "Aulê Barbosa", "Blanca Guillen", "Christian Barrios",
         "Costache Elena", "Crhistian Voinea", "Danut Duta", "David Tamargo", "David Voinea",
         "Davide Sancassani", "Dayanna", "Denís Fernández", "Dinh Ha", "Enrique Brotons",
-        "Eric Lasso", "Federico Mariño Martilotto", "Fina Fernández", "Fiorella Mariño",
+        "Eric Lasso", "Federico Mariño Martilotto", "Fina López", "Fiorella Mariño",
         "Gabi Valverde", "Gabriel Voinea", "Helen Distefano", "Javier Díaz Valledor",
         "Jesica Mariño", "José Carlos", "Josue Molina", "Juan Carlos Mariño",
         "Lavinia Simona Duta", "Leonardo Mariño", "Lorena Voinea", "Lucía Sánchez",
